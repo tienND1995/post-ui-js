@@ -65,6 +65,14 @@ async function handleSubmit(formValues) {
       defaultPost = await postApi.getById(postId)
     }
 
+    if (postId) {
+      const textEditAPost = document.getElementById('postDetailTitle')
+      textEditAPost.textContent = 'Edit a post'
+    } else {
+      const textAddNewPost = document.getElementById('postDetailTitle')
+      textAddNewPost.textContent = 'Add new post'
+    }
+
     // query element form
     const form = document.getElementById('postForm')
     initPostForm({

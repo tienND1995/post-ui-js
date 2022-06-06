@@ -13,8 +13,7 @@ export function setBackGround(parent, selector, imageUrl) {
 export function setTextCapitalize(text) {
   if (!text) return
 
-  let result = ''
-  result = text[0].toUpperCase().concat(text.slice(1))
+  const result = text[0].toUpperCase().concat(text.slice(1))
   return result
 }
 

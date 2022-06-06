@@ -1,4 +1,4 @@
-import { setTextContent } from './common.js'
+import { setTextCapitalize, setTextContent } from './common.js'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 
@@ -13,7 +13,7 @@ function createLiElement(post) {
   // update content li element then appendChild for ul element
   setTextContent(liElement, '[data-id="title"]', post.title)
   setTextContent(liElement, '[data-id="author"]', post.author)
-  setTextContent(liElement, '[data-id="description"]', post.description)
+  setTextContent(liElement, '[data-id="description"]', setTextCapitalize(post.description))
 
   setTextContent(
     liElement,

@@ -82,3 +82,6 @@ ul {
   margin-right: 5px;
 }
 
+small.text-muted {
+  text-transform: capitalize;
+}
